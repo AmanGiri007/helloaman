@@ -123,7 +123,6 @@ python-dateutil==2.8.1
 python-slugify==4.0.0
 python3-openid==3.1.0
 pytz==2020.1
-pywin32==227
 pywinpty==0.5.5
 PyYAML==5.3.1
 pyzmq==18.1.1
