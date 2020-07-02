@@ -27,8 +27,8 @@ SECRET_KEY= os.environ.get('DJANGO_SECRET_KEY','_au62#qek@$$+j6yeel_ahdb04=7+((h
 DEBUG = False 
 #DEBUG= True
 
-#ALLOWED_HOSTS = ['helloaman.herokuapp.com']
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['helloaman.herokuapp.com']
+#ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
