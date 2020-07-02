@@ -14,7 +14,7 @@ import os
 import dj_database_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+TEMPLATES_DIR=os.path.join(BASE_DIR,'templates')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -24,16 +24,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #SECRET_KEY=os.environ['_au62#qek@$$+j6yeel_ahdb04=7+((hwiq_v^4f-5ty#*fruv']     
 SECRET_KEY= os.environ.get('DJANGO_SECRET_KEY','_au62#qek@$$+j6yeel_ahdb04=7+((hwiq_v^4f-5ty#*fruv')
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = False 
-DEBUG= True
+DEBUG = False 
+#DEBUG= True
 
-ALLOWED_HOSTS = ['helloaman.herokuapp.com']
+#ALLOWED_HOSTS = ['helloaman.herokuapp.com']
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    #'hello.apps.HelloConfig',
+    'swagat.apps.SwagatConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'hello.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
