@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = '_au62#qek@$$+j6yeel_ahdb04=7+((hwiq_v^4f-5ty#*fruv'
-SECRET_KEY=os.environ.get('DJANOGO_SECRET_KEY','_au62#qek@$$+j6yeel_ahdb04=7+((hwiq_v^4f-5ty#*fruv')
+SECRET_KEY=os.environ['SECRET_KEY']     
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False 
 #DEBUG= True
@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'hello.apps.HelloConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
