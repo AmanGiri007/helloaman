@@ -115,7 +115,6 @@ pylint==2.4.1
 pylint-django==2.0.15
 pylint-plugin-utils==0.6
 pyparsing==2.4.6
-pypiwin32==223
 pyrsistent==0.15.5
 pytest==5.4.3
 pytest-sugar==0.9.3
