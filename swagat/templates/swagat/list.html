@@ -1,0 +1,22 @@
+{% extends 'swagat/base.html' %}
+{% block content %}
+    <h1>Your To-Do List</h1>
+        <form method="post">
+        {% csrf_token %}
+            <div class="form-group">
+                <h4>Add Item</h4>
+                <input type="text" class="form-control" placeholder="Task" name='contents'>
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </div>
+        </form> 
+        <ul class="list-group">
+            {% for item in items %}
+                <li class="list-group-item">{{item}}
+                <div class="float-right">
+                    <form action="{{item.id}}/" method="post">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div></li>
+            {% endfor %}
+        </ul>
+{% endblock content %}
