@@ -24,11 +24,11 @@ TEMPLATES_DIR=os.path.join(BASE_DIR,'templates')
 #SECRET_KEY=os.environ['_au62#qek@$$+j6yeel_ahdb04=7+((hwiq_v^4f-5ty#*fruv']     
 SECRET_KEY= os.environ.get('DJANGO_SECRET_KEY','_au62#qek@$$+j6yeel_ahdb04=7+((hwiq_v^4f-5ty#*fruv')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False 
-#DEBUG= True
+#DEBUG = False 
+DEBUG= True
 
-ALLOWED_HOSTS = ['helloaman.herokuapp.com']
-#ALLOWED_HOSTS = ['localhost']
+#ALLOWED_HOSTS = ['helloaman.herokuapp.com']
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition

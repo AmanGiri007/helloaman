@@ -1,0 +1,14 @@
+{% extends 'swagat/base.html' %}
+{% block content %}
+    <h3>Create a new account.</h3>
+    <form method="post" action="{% url 'register' %}">
+    {% csrf_token %}
+        <h3>Username:</h3><br>
+            {{form.username}}
+        <h3>Password:</h3><br>
+            {{form.password}}
+        <h3>Email:</h3>
+            {{form.email}}
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+{% endblock content %}

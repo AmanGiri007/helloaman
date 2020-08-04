@@ -1,6 +1,7 @@
 {% extends 'swagat/base.html' %}
 {% block content %}
-    <h1>Your To-Do List</h1>
+    {% if user.is_authenticated %}
+        <h1>Your To-Do List</h1>
         <form method="post">
         {% csrf_token %}
             <div class="form-group">
@@ -19,4 +20,7 @@
                 </div></li>
             {% endfor %}
         </ul>
+    {% else %}
+        <h1>You need to login first.</h1>
+    {% endif %}
 {% endblock content %}
