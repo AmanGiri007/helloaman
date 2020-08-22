@@ -47,8 +47,7 @@ class LoginView(View):
                 login(request,user)
                 return HttpResponseRedirect('/')
             else:
-                complain='Account not found'
-                return render(request,'swagat/login.html',{'complain':complain})
+                return HttpResponse('User not found.Recheck or Create new account')
         return HttpResponse("Invalid. Login Again!!!")
 class LogoutView(View):
     def get(self,request):
