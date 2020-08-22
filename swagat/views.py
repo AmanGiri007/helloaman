@@ -71,5 +71,5 @@ class RegisterView(View):
             new_user=User(username=username,email=email)
             new_user.set_password(password)
             new_user.save()
-            return HttpResponseRedirect('login')
+            return HttpResponseRedirect('/')
         return HttpResponse("Form not filled properly")
