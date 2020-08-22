@@ -12,7 +12,12 @@
         </form> 
         <ul class="list-group">
             {% for item in items %}
-                <li class="list-group-item">{{item}}
+                <li class="list-group-item">
+                <form action="edited/{{item.id}}/" method="post">
+                {% csrf_token %}
+                    <input class="btn btn-dark" type="text" value="{{item}}" name="todo" size="100">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
                 <div class="float-right">
                     <form action="{{item.id}}/" method="post">
                         <button type="submit" class="btn btn-danger">Delete</button>

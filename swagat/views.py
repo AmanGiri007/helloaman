@@ -73,3 +73,9 @@ class RegisterView(View):
             new_user.save()
             return HttpResponseRedirect('/')
         return HttpResponse("Form not filled properly")
+def edit(request,list_id):
+    list_edit=request.POST.get('todo')
+    data=List.objects.get(pk=list_id)
+    data.list_item=list_edit
+    data.save()
+    return HttpResponseRedirect('/lists')
